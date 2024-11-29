@@ -1,0 +1,73 @@
+/* Importamos el CSS base de tu portafolio */
+@import url('styles.css');
+
+/* Estilos específicos para la lista de proyectos */
+.projects-list {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.projects-list__title {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: calc(50% - 30px);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card__title {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.project-card__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn__project {
+    text-decoration: none;
+    background-color: var(--principal-color);
+    color: var(--font-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn__project:hover {
+    background-color: #000033;
+}
+
+@media (max-width: 992px) {
+    .project-card {
+        width: 100%;
+    }
+}

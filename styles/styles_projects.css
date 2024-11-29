@@ -1,0 +1,279 @@
+/* Variables y fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
+
+:root {
+    --principal-color: rgb(0, 4, 59);
+    --font-color: rgb(206, 206, 206);
+    --font-principal: 'Nunito', sans-serif;
+}
+
+/* Comportamiento de scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset CSS */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--font-principal);
+    background-color: white;
+    color: #333;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: var(--principal-color);
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav__l {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--font-color);
+    transition: .5s;
+}
+
+.nav__l:hover {
+    font-weight: 700;
+    text-shadow: 1px 2px 25px white;
+    transform: scale(1.1);
+}
+
+/* Sección de detalle del proyecto */
+.project-detail {
+    width: 80%;
+    max-width: 980px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.project-technologies {
+    margin-bottom: 30px;
+}
+
+.project-technologies h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-technologies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-technologies li {
+    font-size: 18px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.project-technologies .icon {
+    margin-right: 10px;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--principal-color);
+    color: var(--font-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.containerLogoLinks {
+    margin-bottom: 10px;
+}
+
+.containerLogoLinks img {
+    width: 40px;
+    margin: 0 10px;
+    transition: .3s;
+}
+
+.containerLogoLinks img:hover {
+    transform: scale(1.1);
+}
+
+/* Formulario de contacto */
+.contact-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.contact-form h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: var(--principal-color);
+    color: var(--font-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background-color: #000033;
+}
+
+/* Estilos para el botón en la página del proyecto */
+.project-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-button .btn__project {
+    text-decoration: none;
+    border: 2px solid blue;
+    color: blue;
+    padding: 10px 20px;
+    font-family: var(--font-principal);
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.project-button .btn__project:hover {
+    background-color: var(--principal-color);
+    color: var(--font-color);
+}
+
+
+/* Media Queries */
+@media (max-width: 1300px) {
+    .nav__l {
+        font-size: 18px;
+    }
+    
+    .project-title {
+        font-size: 35px;
+    }
+    
+    .contact-form h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav__l {
+        font-size: 16px;
+    }
+    
+    .project-title {
+        font-size: 30px;
+    }
+    
+    .project-description,
+    .project-technologies li {
+        font-size: 15px;
+    }
+    
+    .contact-form h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .project-content {
+        align-items: flex-start;
+    }
+    
+    .project-image img {
+        width: 100%;
+    }
+    
+    .containerLogoLinks img {
+        width: 30px;
+        margin: 0 5px;
+    }
+    
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .contact-form h1 {
+        font-size: 24px;
+    }
+    
+    .contact-form button {
+        width: 100%;
+    }
+}
